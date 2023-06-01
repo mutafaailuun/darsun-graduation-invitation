@@ -17,9 +17,11 @@ import {
 	BsFillPlayCircleFill,
 	BsFillStopCircleFill,
 	BsGeoFill,
+	BsEmojiSmile
 } from "react-icons/bs";
 import useSound from "use-sound";
 import Map from "./components/Map";
+import Thanks from "./components/Thanks";
 
 export default function Home() {
 	const [currentPage, setCurrentPage] = useState("open");
@@ -41,6 +43,9 @@ export default function Home() {
 	}
 	function handleComments() {
 		setCurrentPage("comments");
+	}
+	function handleThanks() {
+		setCurrentPage("thanks");
 	}
 	function handleOpenButton() {
 		play();
@@ -156,6 +161,7 @@ export default function Home() {
 				{currentPage === "comments" && <Comments />}
 			</Element>
 			<Element name="location">{currentPage === "location" && <Map />}</Element>
+			<Element name="thanks">{currentPage === "thanks" && <Thanks />}</Element>
 
 			{/* Bottom Bar */}
 
@@ -198,6 +204,11 @@ export default function Home() {
 							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
 							onClick={handleLocation}>
 							<BsGeoFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#1A1A1A] " />
+						</span>
+						<span
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							onClick={handleThanks}>
+							<BsEmojiSmile className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#1A1A1A] " />
 						</span>
 					</div>
 				</div>
