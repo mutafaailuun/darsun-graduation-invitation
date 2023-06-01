@@ -1,0 +1,9 @@
+{
+    "editor.codeActionsOnSave": {
+
+    },
+    "prettier.tabWidth": 1,
+    "prettier.useTabs": true,
+    "code-runner.saveFileBeforeRun": true,
+    "editor.formatOnSave": true
+}

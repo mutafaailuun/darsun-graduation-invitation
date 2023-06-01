@@ -1,5 +1,4 @@
 import "./globals.css";
-import Button from "./components/Button";
 import Image from "next/image";
 
 export const metadata = {
@@ -11,8 +10,8 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="id">
 			<body>
-				<main className="relative flex items-center justify-center bg-zinc-800 h-screen overflow-hidden">
-					<div className="relative flex items-center">
+				<main className="relative flex items-center justify-center h-screen bg-zinc-900 overflow-hidden">
+					<div className="relative w-[500px] flex items-center">
 						<Image
 							className="absolute right-[250px] animate-spin-slow z-0"
 							src="/img/mandala-spin.png"
@@ -21,7 +20,7 @@ export default function RootLayout({ children }) {
 							height={600}
 						/>
 
-						<div className="relative phone:w-[500px] w-screen bg-scroll h-screen bg-gradient-to-b from-zinc-700 to-zinc-950 shadow-2xl z-10 overflow-hidden border-x-2 border-[#E7C494] ">
+						<div className="relative phone:w-[500px] w-screen bg-scroll bg-gradient-to-b from-black to-[#272727] shadow-2xl z-10 overflow-hidden border-x-2 border-[#E7C494] justify-center h-screen">
 							{/* <Image
 								className="absolute z-20 pl-5"
 								src="/img/rope.png"
@@ -31,7 +30,7 @@ export default function RootLayout({ children }) {
 							/> */}
 							{children}
 							<Image
-								className="absolute -bottom-80 animate-reverse-spin -z-10"
+								className="absolute -bottom-56 animate-reverse-spin -z-10"
 								src="/img/mandala-spin.png"
 								alt="mandala"
 								width={600}
@@ -44,7 +43,6 @@ export default function RootLayout({ children }) {
 								height={30}
 								width={30}
 							/> */}
-							<Button className="bottom-0" />
 						</div>
 
 						<Image

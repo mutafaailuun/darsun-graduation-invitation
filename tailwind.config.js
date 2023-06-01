@@ -7,15 +7,18 @@ module.exports = {
 	],
 	theme: {
 		screens: {
-			phone: "500px",
+			lg: "425px",
+			md: "380px",
+			s: "320px",
+			xs: "100px",
 		},
 		extend: {
 			fontFamily: {
 				sans: ["var(--font-messiri)"],
 			},
 			animation: {
-				"spin-slow": "spin 20s linear infinite",
-				"reverse-spin": "reverse-spin 20s linear infinite",
+				"spin-slow": "spin 50s linear infinite",
+				"reverse-spin": "reverse-spin 50s linear infinite",
 			},
 			backgroundImage: {
 				hero: "./public/BG.png",
@@ -29,5 +32,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("daisyui")],
 };

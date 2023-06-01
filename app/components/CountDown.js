@@ -43,7 +43,7 @@ export default function CountDown() {
 				<p
 					className={`${
 						messiri.className
-					} ${`text-center text-4xl text-[#1A1A1A]`}`}>
+					} ${`text-center text-4xl transition-all text-[#1A1A1A]`}`}>
 					{hours}
 				</p>
 				<p
@@ -71,7 +71,7 @@ export default function CountDown() {
 				<p
 					className={`${
 						messiri.className
-					} ${`text-center text-4xl text-[#1A1A1A]`}`}>
+					} ${`text-center transition-all text-4xl text-[#1A1A1A]`}`}>
 					{seconds}
 				</p>
 				<p
