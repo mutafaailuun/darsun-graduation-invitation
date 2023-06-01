@@ -14,7 +14,7 @@ export default function Rundown() {
 				Rundown Acara
 			</h1>
 
-			<div className="relative mb-3 overflow-y-scroll scrollbar">
+			<div className="relative mb-3 overflow-y-scroll scrollbar text-white">
 				<table
 					className={`${
 						jkt.className
