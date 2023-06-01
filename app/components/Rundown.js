@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import { jkt, messiri, qw } from "../fonts";
-import Asset1 from "/public/svgs/Asset-1.svg";
-import Asset2 from "/public/svgs/Asset-2.svg";
+import { jkt, qw } from "../fonts";
 import Asset3 from "/public/svgs/Asset-3.svg";
 
 export default function Rundown() {
@@ -73,7 +71,7 @@ export default function Rundown() {
 							<td className="border border-l-0 border-black pl-2">6</td>
 							<td className="border border-black pl-2 text-sm">09.10 - 09.25</td>
 							<td className="border border-r-0 border-black pl-2">
-								Pembacaan Ayat Suci Al-Qur'an
+								Pembacaan Ayat Suci Al-Qur&apos;an
 							</td>
 						</tr>
 						{/* row 7 */}
@@ -89,7 +87,7 @@ export default function Rundown() {
 							<td className="border border-l-0 border-black pl-2">8</td>
 							<td className="border border-black pl-2 text-sm">09.10 - 09.25</td>
 							<td className="border border-r-0 border-black pl-2">
-								Prosesi Wisuda Ma'had Darus-Sunnah
+								Prosesi Wisuda Ma&apos;had Darus-Sunnah
 							</td>
 						</tr>
 						{/* row 9 */}

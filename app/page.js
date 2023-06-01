@@ -1,8 +1,7 @@
 "use client";
-import Front from "./components/HomePage";
 import { ari, qw, messiri } from "./fonts";
 import { Element } from "react-scroll";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import DateAndTime from "./components/DateAndTime";
 import Jadwal from "./components/Rundown";
 import Comments from "./components/Comments";
@@ -17,7 +16,7 @@ import {
 	BsFillChatSquareQuoteFill,
 	BsFillPlayCircleFill,
 	BsFillStopCircleFill,
-	BsGeoFill
+	BsGeoFill,
 } from "react-icons/bs";
 import useSound from "use-sound";
 import Map from "./components/Map";
@@ -47,7 +46,7 @@ export default function Home() {
 		play();
 		setIsPlaying(true);
 		setCurrentPage("HomePage");
-		toggleFullscreen()
+		toggleFullscreen();
 	}
 	function handleLocation() {
 		setCurrentPage("location");
@@ -63,19 +62,17 @@ export default function Home() {
 		}
 	}
 
+	const toggleFullscreen = () => {
+		const element = fullscreenRef.current;
 
-
-  const toggleFullscreen = () => {
-    const element = fullscreenRef.current;
-
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else {
-      element.requestFullscreen().catch((err) => {
-        console.error('Failed to enter fullscreen:', err);
-      });
-    }
-  };
+		if (document.fullscreenElement) {
+			document.exitFullscreen();
+		} else {
+			element.requestFullscreen().catch((err) => {
+				console.error("Failed to enter fullscreen:", err);
+			});
+		}
+	};
 
 	return (
 		<div className="relative flex flex-col items-center justify-center">
@@ -134,7 +131,7 @@ export default function Home() {
 							</div>
 
 							<button
-							ref={fullscreenRef}
+								ref={fullscreenRef}
 								onClick={handleOpenButton}
 								className={`${
 									messiri.className

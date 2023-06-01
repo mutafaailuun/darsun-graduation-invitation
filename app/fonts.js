@@ -5,8 +5,7 @@ import {
 	El_Messiri,
 	Qwigley,
 	Great_Vibes,
-	Aref_Ruqaa_Ink
-} from "next/font/google";
+	} from "next/font/google";
 
 const jkt = Plus_Jakarta_Sans({ subsets: ["latin"] });
 const qs = Quicksand({ subsets: ["latin"] });

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import CountDown from "./CountDown";
-import { qw, messiri, jkt, gv } from "../fonts";
+import { messiri, gv } from "../fonts";
 import Calendar from "/public/svgs/calendar-seventeen.svg";
 import Map from "/public/svgs/map-svgrepo-com.svg";
 

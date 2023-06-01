@@ -2,7 +2,7 @@ import React from "react";
 import { qw, jkt } from "../fonts";
 import { relative } from "path";
 
-const MapGoogle = (props) => {
+const MapGoogle = () => {
 	const containerStyle = {
 		position: relative,
 		width: "100%",
