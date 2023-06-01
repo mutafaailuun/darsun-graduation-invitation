@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { messiri } from "../fonts";
 import { useState } from "react";
 export default function CountDown() {

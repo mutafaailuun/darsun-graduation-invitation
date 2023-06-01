@@ -1,4 +1,3 @@
-import React from "react";
 import { qw, jkt } from "../fonts";
 import { relative } from "path";
 

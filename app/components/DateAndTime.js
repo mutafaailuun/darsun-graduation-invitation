@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import CountDown from "./CountDown";
 import { messiri, gv } from "../fonts";
 import Calendar from "/public/svgs/calendar-seventeen.svg";

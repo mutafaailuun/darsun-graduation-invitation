@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { jkt, qw } from "../fonts";
 import Asset3 from "/public/svgs/Asset-3.svg";
 
