@@ -9,11 +9,12 @@ export default function DateAndTime() {
 	return (
 		<div>
 			<div className="flex flex-col justify-center h-screen -mt-14">
+				{}
 				<p
 					className={`${
 						messiri.className
 					} ${`text-[#FEFFDB] px-20 text-center text-sm`}`}>
-					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda
+					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda <br className="md:hidden xs:block"/>
 					Pesantren Darus-Sunnah
 				</p>
 				<h1
