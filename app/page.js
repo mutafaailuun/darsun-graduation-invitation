@@ -19,10 +19,12 @@ import {
 	BsFillStopCircleFill,
 	BsGeoFill,
 	BsEmojiSmile,
+	BsFilePersonFill
 } from "react-icons/bs";
 import useSound from "use-sound";
 import Map from "./components/Map";
 import Thanks from "./components/Thanks";
+import Contact from "./components/Contact";
 
 export default function Home() {
 	const [currentPage, setCurrentPage] = useState("open");
@@ -47,6 +49,9 @@ export default function Home() {
 	}
 	function handleThanks() {
 		setCurrentPage("thanks");
+	}
+	function handleContact() {
+		setCurrentPage("contact");
 	}
 	function handleOpenButton() {
 		play();
@@ -157,6 +162,7 @@ export default function Home() {
 				{currentPage === "comments" && <Comments />}
 			</Element>
 			<Element name="location">{currentPage === "location" && <Map />}</Element>
+			<Element name="contact">{currentPage === "contact" && <Contact />}</Element>
 			<Element name="thanks">{currentPage === "thanks" && <Thanks />}</Element>
 
 			{/* Bottom Bar */}
@@ -193,13 +199,18 @@ export default function Home() {
 						</span>
 						<span
 							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							onClick={handleLocation}>
+							<BsGeoFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
+						</span>
+						<span
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleComments}>
 							<BsFillChatSquareQuoteFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
 							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
-							onClick={handleLocation}>
-							<BsGeoFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
+							onClick={handleContact}>
+							<BsFilePersonFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
 							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
