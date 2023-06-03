@@ -6,12 +6,13 @@ import DateAndTime from "./components/DateAndTime";
 import Jadwal from "./components/Rundown";
 import Comments from "./components/Comments";
 import Darsun from "/public/svgs/Darsun.svg";
+
 import Ornament4 from "/public/svgs/ornament-4.svg";
 import HomePage from "./components/HomePage";
 import { useSearchParams } from "next/navigation";
 import {
+	BsCalendar3,
 	BsFillHouseDoorFill,
-	BsCalendarDateFill,
 	BsListCheck,
 	BsFillChatSquareQuoteFill,
 	BsFillPlayCircleFill,
@@ -183,7 +184,7 @@ export default function Home() {
 						<span
 							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleDates}>
-							<BsCalendarDateFill className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+							<BsCalendar3 className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
 							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"

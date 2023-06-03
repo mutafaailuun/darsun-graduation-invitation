@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,6 +14,10 @@ module.exports = {
 			xs: "100px",
 		},
 		extend: {
+			colors: {
+				"red-main": "#AA3609",
+				"green-main": "#373F10",
+			},
 			fontFamily: {
 				sans: ["var(--font-messiri)"],
 			},
@@ -32,5 +37,6 @@ module.exports = {
 			},
 		},
 	},
+	// eslint-disable-next-line no-undef
 	plugins: [require("daisyui")],
 };

@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 							height={600}
 						/>
 
-						<div className="relative phone:w-[500px] w-screen bg-scroll bg-gradient-to-b from-[#fffdec] to-[#EEEAD6] shadow-2xl z-10 overflow-hidden border-x-2 border-[#E7C494] justify-center h-screen">
+						<div className="relative phone:w-[500px] w-screen bg-scroll bg-gradient-to-b from-[#fffdec] to-[#EEEAD6] shadow-2xl z-10 overflow-hidden border-x-2 border-[#373F10] justify-center h-screen">
 							{/* <Image
 								className="absolute z-20 pl-5"
 								src="/img/rope.png"

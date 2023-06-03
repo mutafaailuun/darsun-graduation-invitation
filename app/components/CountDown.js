@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { messiri } from "../fonts";
+import { jkt } from "../fonts";
 import { useState } from "react";
 export default function CountDown() {
 	const [days, setDays] = useState(0);
@@ -25,59 +25,59 @@ export default function CountDown() {
 
 	return (
 		<div className="flex justify-center mt-5">
-			<span className="mx-2 bg-gradient-to-b from-[#E7C494] to-[#8C6E4A] w-14 h-20 rounded-lg flex flex-col justify-center">
+			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-4xl text-[#1A1A1A]`}`}>
+						jkt.className
+					} ${`text-center font-black text-4xl text-white mb-2`}`}>
 					{days}
 				</p>
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-l text-[#1A1A1A] -mt-2 font-bold`}`}>
+						jkt.className
+					} ${`text-center text-sm text-white -mt-2 font-bold`}`}>
 					Hari
 				</p>
 			</span>
-			<span className="mx-2 bg-gradient-to-b from-[#E7C494] to-[#8C6E4A] w-14 h-20 rounded-lg flex flex-col justify-center">
+			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-4xl transition-all text-[#1A1A1A]`}`}>
+						jkt.className
+					} ${`text-center text-4xl transition-all text-white font-bold mb-2`}`}>
 					{hours}
 				</p>
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-l text-[#1A1A1A] -mt-2 font-bold`}`}>
+						jkt.className
+					} ${`text-center text-sm text-white font-bold -mt-2`}`}>
 					Jam
 				</p>
 			</span>
-			<span className="mx-2 bg-gradient-to-b from-[#E7C494] to-[#8C6E4A] w-14 h-20 rounded-lg flex flex-col justify-center">
+			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-4xl text-[#1A1A1A]`}`}>
+						jkt.className
+					} ${`text-center text-4xl text-white font-bold mb-2`}`}>
 					{minutes}
 				</p>
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-l text-[#1A1A1A] -mt-2 font-bold`}`}>
+						jkt.className
+					} ${`text-center text-sm text-white -mt-2 font-bold`}`}>
 					Menit
 				</p>
 			</span>
-			<span className="mx-2 bg-gradient-to-b from-[#E7C494] to-[#8C6E4A] w-14 h-20 rounded-lg flex flex-col justify-center">
+			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center transition-all text-4xl text-[#1A1A1A]`}`}>
+						jkt.className
+					} ${`text-center transition-all text-4xl text-white font-bold mb-2`}`}>
 					{seconds}
 				</p>
 				<p
 					className={`${
-						messiri.className
-					} ${`text-center text-l text-[#1A1A1A] -mt-2 font-bold`}`}>
+						jkt.className
+					} ${`text-center text-sm text-white -mt-2 font-bold`}`}>
 					Detik
 				</p>
 			</span>

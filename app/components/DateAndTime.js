@@ -14,7 +14,8 @@ export default function DateAndTime() {
 					className={`${
 						messiri.className
 					} ${`text-[#373F10] px-10 text-center text-sm`}`}>
-					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda <br className="s:hidden xs:block"/>
+					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda{" "}
+					<br className="s:hidden xs:block" />
 					Pesantren Darus-Sunnah
 				</p>
 				<h1
@@ -25,15 +26,18 @@ export default function DateAndTime() {
 				</h1>
 				<div className="flex items-center flex-col justify-center mx-10">
 					<div className="flex items-center flex-col mx-10 ">
-						<Calendar className="md:w-20 s:w-10 top-0 " />
+						<Calendar className="md:w-20 s:w-10 top-0 fill-none" />
 						<h2
 							className={`${
 								messiri.className
-							} ${`pt-2 text-center text-2xl text-[#FEFFDB]`}`}>
+							} ${`pt-2 text-center text-2xl font-extrabold text-red-main`}`}>
 							Sabtu, 17 Juni 2023
 						</h2>
 
-						<p className={`${messiri.className} ${`text-base text-[#FEFFDB] pb-4`} `}>
+						<p
+							className={`${
+								messiri.className
+							} ${`text-base text-center font-bold text-red-main pb-4`} `}>
 							Pukul 07.00 s/d Selesai
 						</p>
 					</div>
@@ -44,14 +48,14 @@ export default function DateAndTime() {
 						<h2
 							className={`${
 								messiri.className
-							} ${`text-center text-2xl text-[#FEFFDB]`}`}>
-							Gedung Syahida Inn
+							} ${`text-center text-xl font-black text-green-main`}`}>
+							Gedung Wisma Syahida Inn, <br /> UIN Syarif Hidayatullah Jakarta
 						</h2>
 
 						<p
 							className={`${
 								messiri.className
-							} ${`text-base text-center text-[#FEFFDB]`} `}>
+							} ${`text-base text-center text-green-main font-semibold`} `}>
 							Jl. Kertamukti, Pisangan, Kec. Ciputat Timur., Kota Tangerang Selatan,
 							Banten 15419
 						</p>
