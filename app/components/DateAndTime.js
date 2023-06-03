@@ -13,8 +13,8 @@ export default function DateAndTime() {
 				<p
 					className={`${
 						messiri.className
-					} ${`text-[#FEFFDB] px-20 text-center text-sm`}`}>
-					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda <br className="md:hidden xs:block"/>
+					} ${`text-[#FEFFDB] px-10 text-center text-sm`}`}>
+					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda <br className="s:hidden xs:block"/>
 					Pesantren Darus-Sunnah
 				</p>
 				<h1
