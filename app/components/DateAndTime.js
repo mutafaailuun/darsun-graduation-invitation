@@ -13,14 +13,14 @@ export default function DateAndTime() {
 				<p
 					className={`${
 						messiri.className
-					} ${`text-[#FEFFDB] px-10 text-center text-sm`}`}>
+					} ${`text-[#373F10] px-10 text-center text-sm`}`}>
 					Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Wisuda <br className="s:hidden xs:block"/>
 					Pesantren Darus-Sunnah
 				</p>
 				<h1
 					className={`${
 						gv.className
-					} ${`text-[#FEFFDB] text-3xl text-center py-4`}`}>
+					} ${`text-[#AA3609] text-3xl text-center py-4`}`}>
 					Yang Diselenggarakan Pada
 				</h1>
 				<div className="flex items-center flex-col justify-center mx-10">

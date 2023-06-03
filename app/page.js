@@ -1,5 +1,5 @@
 "use client";
-import { ari, qw, messiri } from "./fonts";
+import { qw, messiri } from "./fonts";
 import { Element } from "react-scroll";
 import { useState, useRef } from "react";
 import DateAndTime from "./components/DateAndTime";
@@ -17,7 +17,7 @@ import {
 	BsFillPlayCircleFill,
 	BsFillStopCircleFill,
 	BsGeoFill,
-	BsEmojiSmile
+	BsEmojiSmile,
 } from "react-icons/bs";
 import useSound from "use-sound";
 import Map from "./components/Map";
@@ -84,63 +84,58 @@ export default function Home() {
 			<Element name="open">
 				{currentPage === "open" && (
 					<>
-						<div className="z-20 flex items-center flex-col justify-center h-screen overflow-hidden">
-							<Darsun className="fill-[#E7C494] w-14" />
-							<Ornament4 className="w-32 mb-3 mt-2" />
+						<div className="z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
+							<span className="p-2 bg-[#AA3609] rounded-full drop-shadow-md">
+								<Darsun className="fill-[#FFFDEC] stroke-[#AA3609] w-14" />
+							</span>
+
+							<Ornament4 className="w-32 mb-3 mt-2 fill-[#FFFDEC]" />
+							<h2
+								className={`${
+									qw.className
+								} ${`z-10 text-7xl text-center text-[#AA3609] `}`}>
+								Undangan
+							</h2>
 							<h1
 								className={`${
-									ari.className
-								} ${` text-5xl font-semibold text-amber-200 text-center z-50 pt-5`}`}>
+									messiri.className
+								} ${` text-5xl font-semibold text-[#AA3609] text-center z-50 pt-5`}`}>
 								حفلة التخرج
 							</h1>
 							<h5
 								className={`${
-									ari.className
-								} ${`text-xl text-amber-200 text-center pt-6`}`}>
-								معهد دار السنة الدولى لعلوم الحديث
+									messiri.className
+								} ${`text-xl text-[#AA3609] text-center`}`}>
+								معهد دار السنة الإسلامي
 							</h5>
-							<h5
-								className={`${
-									ari.className
-								} ${`text-xl text-amber-200 text-center pt-0`}`}>
-								ومدارس دار السنة الاسلامية
-							</h5>
-
-							<h2
-								className={`${
-									qw.className
-								} ${`z-10 text-[5rem] text-center text-amber-200 `}`}>
-								Undangan
-							</h2>
 
 							<h2
 								className={`${
 									messiri.className
-								} ${`z-10 text-xl text-center text-amber-200`}`}>
+								} ${`z-10 text-lg font-extrabold text-center text-[#373F10] pt-4`}`}>
 								Wisuda Santri & Mahasantri
 							</h2>
 							<h3
 								className={`${
 									messiri.className
-								} ${`z-10 text-xl text-center text-amber-200 pb-4`}`}>
+								} ${`z-10 text-lg font-semibold text-center text-[#373F10] pb-4`}`}>
 								Pesantren Darus-Sunnah
 							</h3>
 							<h4
 								className={`${
 									messiri.className
-								} ${`z-10 text-m text-center text-amber-200 py-0`}`}>
+								} ${`z-10 text-m text-center text-[#373F10]`}`}>
 								Kpd. Yth. <br /> Bapak/Ibu/Saudara/i
 							</h4>
-							<div className="p-3 my-3 border-2 border-amber-200 rounded-3xl bg-black text-xl text-amber-200">
+							<div className="p-3 mt-3 drop-shadow-lg rounded-3xl bg-[#373F10] text-xl text-[#FFFDEC]">
 								<p className={messiri.className}>{name}</p>
 							</div>
-
 							<button
 								ref={fullscreenRef}
 								onClick={handleOpenButton}
 								className={`${
 									messiri.className
-								} ${`relative z-10 bg-gradient-to-r from-amber-200 to-amber-300 text-zinc-800 rounded-xl font-bold py-2 px-2`}`}>
+								} ${`relative z-10 bg-gradient-to-r from-[#AA3609] to-[#ff6745] text-[#FFFDEC] rounded-xl font-bold my-2 py-2 px-2`}`}>
 								Buka Undangan
 							</button>
 						</div>
@@ -170,45 +165,45 @@ export default function Home() {
 					{isPlaying ? (
 						<BsFillPlayCircleFill
 							onClick={handleSound}
-							className="absolute bottom-20 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#E7C494] "
+							className="absolute bottom-20 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#373F10] "
 						/>
 					) : (
 						<BsFillStopCircleFill
 							onClick={handleSound}
-							className="absolute bottom-20 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#E7C494] "
+							className="absolute bottom-20 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#AA3609] "
 						/>
 					)}
 
-					<div className="bottom-0 bg-gradient-to-br from-[#E7C494] to-[#FFEDD4] h-14 flex items-center justify-center w-full">
+					<div className="bottom-0 bg-[#373F10] h-14 flex items-center justify-center w-full">
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleFront}>
-							<BsFillHouseDoorFill className="w-full h-full py-3 px-4 text-[#1A1A1A]  hover:fill-[#E7C494]" />
+							<BsFillHouseDoorFill className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleDates}>
-							<BsCalendarDateFill className="w-full h-full py-3 px-4 text-[#1A1A1A]  hover:fill-[#E7C494]" />
+							<BsCalendarDateFill className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleRundown}>
-							<BsListCheck className="w-full h-full py-3 px-4 text-[#1A1A1A]  hover:fill-[#E7C494]" />
+							<BsListCheck className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleComments}>
-							<BsFillChatSquareQuoteFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#1A1A1A] " />
+							<BsFillChatSquareQuoteFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleLocation}>
-							<BsGeoFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#1A1A1A] " />
+							<BsGeoFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center rounded-md"
+							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
 							onClick={handleThanks}>
-							<BsEmojiSmile className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#1A1A1A] " />
+							<BsEmojiSmile className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 					</div>
 				</div>

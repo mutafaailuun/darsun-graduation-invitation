@@ -1,4 +1,4 @@
-import { ari, messiri, qw } from "../fonts";
+import { messiri, qw } from "../fonts";
 import Darsun from "/public/svgs/Darsun.svg";
 import Ornament4 from "/public/svgs/ornament-4.svg";
 import { useSearchParams } from "next/navigation";
