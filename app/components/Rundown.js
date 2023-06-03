@@ -10,7 +10,7 @@ export default function Rundown() {
 			<h1
 				className={`${
 					qw.className
-				} ${`text-center text-5xl border-collapse text-[#E7C494]`}`}>
+				} ${`text-center text-5xl border-collapse text-red-main`}`}>
 				Rundown Acara
 			</h1>
 
@@ -18,7 +18,7 @@ export default function Rundown() {
 				<table
 					className={`${
 						jkt.className
-					} ${`relative w-full bg-amber-200 bg-opacity-30 table-compact rounded-xl overflow-y-scroll`}`}>
+					} ${`relative w-full bg-red-main bg-opacity-80 table-compact rounded-xl overflow-y-scroll`}`}>
 					{/* head */}
 					<thead>
 						<tr className="text-left my-2">

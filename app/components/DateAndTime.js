@@ -43,7 +43,7 @@ export default function DateAndTime() {
 					</div>
 
 					{/* Location */}
-					<div className="flex items-center flex-col mx-10 ">
+					<div className="flex items-center flex-col mx-2 ">
 						<Map className="md:w-24 s:w-10 fill-none stroke-[1px]" />
 						<h2
 							className={`${

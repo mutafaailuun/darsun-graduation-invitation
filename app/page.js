@@ -166,12 +166,12 @@ export default function Home() {
 					{isPlaying ? (
 						<BsFillPlayCircleFill
 							onClick={handleSound}
-							className="absolute bottom-20 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#373F10] "
+							className="absolute bottom-20 z-50 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#373F10] "
 						/>
 					) : (
 						<BsFillStopCircleFill
 							onClick={handleSound}
-							className="absolute bottom-20 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#AA3609] "
+							className="absolute bottom-20 z-50 text-sm w-[70px] h-[70px] py-3 px-4 fill-[#AA3609] "
 						/>
 					)}
 

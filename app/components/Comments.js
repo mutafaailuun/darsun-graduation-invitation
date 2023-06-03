@@ -37,21 +37,21 @@ const Comments = () => {
 		<div className="z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
 			<div className="w-full px-10">
 				<h1
-					className={`${messiri.className} ${`text-[#E7C494] text-center text-xl`}`}>
+					className={`${messiri.className} ${`text-green-main font-black text-center text-xl`}`}>
 					Kartu Ucapan
 				</h1>
 				<div
 					ref={messageEndRef}
 					className={`${
 						jkt.className
-					} ${`flex flex-col pl-5 py-3 rounded-2xl border-2 max-h-[30vh]  overflow-scroll overflow-x-hidden scrollbar border-[#E7C494] scroll-smooth`}`}>
+					} ${`flex flex-col pl-5 py-3 rounded-2xl border-2 max-h-[30vh]  overflow-scroll overflow-x-hidden scrollbar border-green-main scroll-smooth`}`}>
 					{users.map((user, index) => (
 						<div key={user.id}>
 							<h3
-								className={`${jkt.className} ${`text-[#E7C494] font-bold text-base`}`}>
+								className={`${jkt.className} ${`text-red-main font-bold text-base`}`}>
 								{user.name}
 							</h3>
-							<p className="text-sm text-justify">{user.comments}</p>
+							<p className="text-sm text-justify text-green-main">{user.comments}</p>
 							{index !== users.length - 1 && <hr className="my-3 border-[#E7C494]" />}
 						</div>
 					))}
@@ -61,13 +61,13 @@ const Comments = () => {
 				<h1
 					className={`${
 						messiri.className
-					} ${`pt-5 pb-1 text-[#E7C494] text-center text-xl`}`}>
+					} ${`pt-5 pb-1 text-red-main font-black text-center text-xl`}`}>
 					Kirim Ucapan
 				</h1>
 				<div
 					className={`${
 						jkt.className
-					} ${`p-3 rounded-2xl border-2 border-[#E7C494]`}`}>
+					} ${`p-3 rounded-2xl border-2 border-red-main`}`}>
 					<form
 						onSubmit={saveUser}
 						className="w-full p-0 flex flex-col items-center justify-center">
@@ -78,7 +78,7 @@ const Comments = () => {
 							onChange={(e) => setName(e.target.value)}
 							className={`${
 								jkt.className
-							} ${"bg-[#1a1a1a] p-2 focus:outline-none border-amber-200 rounded-lg input input-bordered input-warning w-full"}`}
+							} ${"bg-[#eeead6] p-2 focus:outline border-red-main rounded-lg input input-bordered text-red-main placeholder:text-red-main placeholder:text-opacity-60 w-full"}`}
 						/>
 						<textarea
 							type="text"
@@ -87,8 +87,8 @@ const Comments = () => {
 							onChange={(e) => setComments(e.target.value)}
 							className={`${
 								jkt.className
-							} ${`bg-[#1a1a1a] border-amber-200 p-2 my-2 rounded-lg input h-32 w-full`}`}></textarea>
-						<button type="submit" className="btn btn-warning">
+							} ${`bg-[#eeead6] border-red-main p-2 my-2 rounded-lg input text-red-main h-32 w-full placeholder:text-red-main placeholder:text-opacity-60`}`}></textarea>
+						<button type="submit" className="btn w-full border-none bg-red-main hover:bg-gradient-to-r from-[#957314] to-[#C09F3D] text-[#eeead6]">
 							Kirim
 						</button>
 					</form>
