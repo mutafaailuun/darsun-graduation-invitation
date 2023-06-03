@@ -181,41 +181,41 @@ export default function Home() {
 						/>
 					)}
 
-					<div className="bottom-0 bg-[#373F10] h-14 flex items-center justify-center w-full">
+					<div className="bottom-0 bg-[#373F10] h-14 flex items-center justify-start w-full overflow-scroll snap-x">
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-[90px] flex items-center snap snap-center"
 							onClick={handleFront}>
-							<BsFillHouseDoorFill className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+							<BsFillHouseDoorFill className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
 							onClick={handleDates}>
-							<BsCalendar3 className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+							<BsCalendar3 className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
 							onClick={handleRundown}>
-							<BsListCheck className="w-full h-full py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+							<BsListCheck className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
 							onClick={handleLocation}>
-							<BsGeoFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
+							<BsGeoFill className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
 							onClick={handleComments}>
-							<BsFillChatSquareQuoteFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
+							<BsFillChatSquareQuoteFill className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
 							onClick={handleContact}>
-							<BsFilePersonFill className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
+							<BsFilePersonFill className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] h-full flex items-center"
+							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center"
 							onClick={handleThanks}>
-							<BsEmojiSmile className="text-sm w-full h-full py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
+							<BsEmojiSmile className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
 						</span>
 					</div>
 				</div>
