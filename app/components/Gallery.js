@@ -1,7 +1,8 @@
-import { EffectCards } from "swiper";
+// import { EffectCards } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { qw } from "../fonts";
 import Image from "next/image";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
@@ -9,28 +10,53 @@ const Gallery = () => {
 	const images = [
 		{
 			id: 1,
-			name: "campur-0",
+			name: "campur-01",
 		},
 
 		{
 			id: 2,
-			name: "campur-",
+			name: "campur-02",
 		},
 		{
 			id: 3,
-			name: "banin-",
+			name: "campur-1",
 		},
+
 		{
 			id: 4,
-			name: "banat-",
+			name: "campur-2",
 		},
 		{
 			id: 5,
-			name: "mdsbareng-",
+			name: "banin-1",
 		},
 		{
 			id: 6,
-			name: "mds-batik-",
+			name: "banin-2",
+		},
+		{
+			id: 7,
+			name: "banat-1",
+		},
+		{
+			id: 8,
+			name: "banat-2",
+		},
+		{
+			id: 9,
+			name: "mdsbareng-1",
+		},
+		{
+			id: 10,
+			name: "mdsbareng-2",
+		},
+		{
+			id: 11,
+			name: "mds-batik-1",
+		},
+		{
+			id: 12,
+			name: "mds-batik-2",
 		},
 	];
 	return (
@@ -39,7 +65,42 @@ const Gallery = () => {
 				className={`${qw.className} z-10 text-center text-5xl border-collapse text-green-main`}>
 				Galeri Foto Wisudawan
 			</h1>
+
 			<Swiper
+				spaceBetween={30}
+				centeredSlides={true}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: false,
+				}}
+				pagination={{
+					clickable: true,
+				}}
+				navigation={true}
+				modules={[Autoplay, Pagination, Navigation]}
+				className="mySwiper">
+				{images.map((image) => (
+					<SwiperSlide key={image.id} className="object-cover">
+						<Image
+							className="rounded-xl"
+							src={`/static/img/${image.name}.jpg`}
+							height={400}
+							width={400}
+							alt=""
+						/>
+					</SwiperSlide>
+				))}
+				{/* <SwiperSlide>Slide 1</SwiperSlide>
+				<SwiperSlide>Slide 2</SwiperSlide>
+				<SwiperSlide>Slide 3</SwiperSlide>
+				<SwiperSlide>Slide 4</SwiperSlide>
+				<SwiperSlide>Slide 5</SwiperSlide>
+				<SwiperSlide>Slide 6</SwiperSlide>
+				<SwiperSlide>Slide 7</SwiperSlide>
+				<SwiperSlide>Slide 8</SwiperSlide>
+				<SwiperSlide>Slide 9</SwiperSlide> */}
+			</Swiper>
+			{/* <Swiper
 				effect={"cards"}
 				grabCursor={true}
 				modules={[EffectCards]}
@@ -60,7 +121,7 @@ const Gallery = () => {
 						/>
 					</SwiperSlide>
 				))}
-			</Swiper>
+			</Swiper> */}
 		</div>
 	);
 };

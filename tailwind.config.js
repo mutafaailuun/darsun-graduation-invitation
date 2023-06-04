@@ -17,6 +17,7 @@ module.exports = {
 			colors: {
 				"red-main": "#AA3609",
 				"green-main": "#373F10",
+				vanilla: "#FFFDEC",
 			},
 			fontFamily: {
 				sans: ["var(--font-messiri)"],

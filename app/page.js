@@ -3,7 +3,7 @@ import { qw, messiri } from "./fonts";
 import { Element } from "react-scroll";
 import { useState, useRef, useEffect } from "react";
 import DateAndTime from "./components/DateAndTime";
-import Jadwal from "./components/Rundown";
+import Rundown from "./components/Rundown";
 import Comments from "./components/Comments";
 import Darsun from "/public/svgs/Darsun.svg";
 import Ornament4 from "/public/svgs/ornament-4.svg";
@@ -37,31 +37,35 @@ export default function Home() {
 	const fullscreenRef = useRef(null);
 	const name = useSearchParams();
 	const bottomBarRef = useRef(null);
-	const icons = [
+	const elements = [
 		{
 			id: 1,
 			name: "HomePage",
 			icon: BsFillHouseDoorFill,
+			component: <HomePage />,
 		},
 		{
 			id: 2,
-			name: "datesAndTime",
+			name: "DateAndTime",
 			icon: BsCalendar3,
+			component: <DateAndTime />,
 		},
-		{ id: 3, name: "rundown", icon: BsListCheck },
-		{ id: 4, name: "location", icon: BsGeoFill },
+		{ id: 3, name: "Rundown", icon: BsListCheck, component: <Rundown /> },
+		{ id: 4, name: "Map", icon: BsGeoFill, component: <Map /> },
 		{
 			id: 5,
-			name: "comments",
+			name: "Comments",
 			icon: BsFillChatSquareQuoteFill,
+			component: <Comments />,
 		},
 		{
 			id: 6,
-			name: "gallery",
+			name: "Gallery",
 			icon: BsImages,
+			component: <Gallery />,
 		},
-		{ id: 7, name: "contact", icon: BsFilePersonFill },
-		{ id: 8, name: "thanks", icon: BsEmojiSmile },
+		{ id: 7, name: "Contact", icon: BsFilePersonFill, component: <Contact /> },
+		{ id: 8, name: "Thanks", icon: BsEmojiSmile, component: <Thanks /> },
 		// Add more icons as needed
 	];
 
@@ -103,9 +107,9 @@ export default function Home() {
 			const deltaY = event.deltaY;
 			if (deltaY > 0) {
 				// Swipe down detected, change currentPage
-				const nextIndex = icons.findIndex((icon) => icon.id === currentPage) + 1;
-				if (nextIndex < icons.length) {
-					const nextIcon = icons[nextIndex];
+				const nextIndex = elements.findIndex((icon) => icon.id === currentPage) + 1;
+				if (nextIndex < elements.length) {
+					const nextIcon = elements[nextIndex];
 					handleClickBottomBar(nextIcon.id, nextIcon.name);
 					scroller.scrollTo(nextIcon.id, {
 						duration: 500,
@@ -122,7 +126,7 @@ export default function Home() {
 		return () => {
 			bottomBarRef.current?.removeEventListener("wheel", handleSwipeDown);
 		};
-	}, [currentPage, handleClickBottomBar, icons]);
+	}, [currentPage, handleClickBottomBar, elements]);
 
 	return (
 		<div className="relative flex flex-col items-center justify-center">
@@ -192,18 +196,17 @@ export default function Home() {
 			<Element name="HomePage">
 				{currentPage === "HomePage" && <HomePage />}
 			</Element>
-
-			<Element name="datesAndTime">
-				{currentPage === "datesAndTime" && <DateAndTime />}
+			<Element name="DateAndTime">
+				{currentPage === "DateAndTime" && <DateAndTime />}
 			</Element>
-			<Element name="rundown">{currentPage === "rundown" && <Jadwal />}</Element>
-			<Element name="comments">
-				{currentPage === "comments" && <Comments />}
+			<Element name="rundown">{currentPage === "Rundown" && <Rundown />}</Element>
+			<Element name="Comments">
+				{currentPage === "Comments" && <Comments />}
 			</Element>
-			<Element name="location">{currentPage === "location" && <Map />}</Element>
-			<Element name="contact">{currentPage === "contact" && <Contact />}</Element>
-			<Element name="gallery">{currentPage === "gallery" && <Gallery />}</Element>
-			<Element name="thanks">{currentPage === "thanks" && <Thanks />}</Element>
+			<Element name="Location">{currentPage === "Map" && <Map />}</Element>
+			<Element name="Contact">{currentPage === "Contact" && <Contact />}</Element>
+			<Element name="Gallery">{currentPage === "Gallery" && <Gallery />}</Element>
+			<Element name="Thanks">{currentPage === "Thanks" && <Thanks />}</Element>
 
 			{/* Bottom Bar */}
 
@@ -224,12 +227,12 @@ export default function Home() {
 					<div
 						ref={bottomBarRef}
 						className="bottom-bar bottom-0 bg-[#373F10] h-[60px] flex items-center justify-start w-full overflow-x-scroll">
-						{icons.map((icon) => (
+						{elements.map((element) => (
 							<span
-								key={icon.id}
+								key={element.id}
 								className={`hover:bg-gradient-to-b from-black to-[#272727] w-[60px] h-[60px] flex items-center snap snap-center`}
-								onClick={() => handleClickBottomBar(icon.id, icon.name)}>
-								<icon.icon className="w-[60px] h-[60px] p-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+								onClick={() => handleClickBottomBar(element.id, element.name)}>
+								<element.icon className="w-[60px] h-[60px] p-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 							</span>
 						))}
 					</div>

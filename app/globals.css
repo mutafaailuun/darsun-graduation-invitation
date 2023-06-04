@@ -47,8 +47,8 @@ body {
 }
 
 .swiper {
-	object-fit: cover;
-	width: 20rem;
+	padding: 2rem;
+	width: 400px;
 	height: fit-content;
 }
 
