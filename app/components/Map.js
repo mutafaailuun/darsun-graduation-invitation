@@ -12,7 +12,7 @@ const MapGoogle = () => {
 		window.open(`https://goo.gl/maps/CZF8f5daqPZdjZsf8`);
 	};
 	return (
-		<div className="relative z-20 -mt-14 flex items-center flex-col justify-center w-[100%] h-screen overflow-hidden">
+		<div className="relative z-20 -mt-[60px] flex items-center flex-col justify-center w-[100%] h-screen overflow-hidden">
 			<div className="relative w-[80%] h-screen flex flex-col items-center justify-center mx-20">
 				<h1
 					className={`${

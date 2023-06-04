@@ -7,7 +7,7 @@ export default function HomePage() {
 	const name = useSearchParams();
 	return (
 		<>
-			<div className="z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
+			<div className="z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">
 				<span className="p-2 bg-[#AA3609] rounded-full drop-shadow-md">
 					<Darsun className="fill-[#FFFDEC] stroke-[#AA3609] w-14" />
 				</span>

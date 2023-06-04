@@ -14,7 +14,7 @@ const Contact = () => {
 	}
 
 	return (
-		<div className="flex flex-col items-center justify-center h-screen -mt-14">
+		<div className="flex flex-col items-center justify-center h-screen -mt-[60px]">
 			<h1
 				className={`${
 					qw.className

@@ -5,7 +5,7 @@ import Asset3 from "/public/svgs/Asset-3.svg";
 
 export default function Rundown() {
 	return (
-		<div className="relative mx-10 z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
+		<div className="relative mx-10 z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">
 			<Asset3 className="w-54 mt-20" />
 			<h1
 				className={`${

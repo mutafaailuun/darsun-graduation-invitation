@@ -8,7 +8,7 @@ import Map from "/public/svgs/map-svgrepo-com.svg";
 export default function DateAndTime() {
 	return (
 		<div>
-			<div className="flex flex-col justify-center h-screen -mt-14">
+			<div className="flex flex-col justify-center h-screen -mt-[60px]">
 				{}
 				<p
 					className={`${

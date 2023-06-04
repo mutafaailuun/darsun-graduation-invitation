@@ -223,13 +223,13 @@ export default function Home() {
 
 					<div
 						ref={bottomBarRef}
-						className="bottom-bar bottom-0 bg-[#373F10] h-14 flex items-center justify-start w-full overflow-x-scroll">
+						className="bottom-bar bottom-0 bg-[#373F10] h-[60px] flex items-center justify-start w-full overflow-x-scroll">
 						{icons.map((icon) => (
 							<span
 								key={icon.id}
-								className={`hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-[60px] flex items-center snap snap-center`}
+								className={`hover:bg-gradient-to-b from-black to-[#272727] w-[60px] h-[60px] flex items-center snap snap-center`}
 								onClick={() => handleClickBottomBar(icon.id, icon.name)}>
-								<icon.icon className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+								<icon.icon className="w-[60px] h-[60px] p-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 							</span>
 						))}
 					</div>

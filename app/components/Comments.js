@@ -34,7 +34,7 @@ const Comments = () => {
 	};
 
 	return (
-		<div className="z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
+		<div className="z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">
 			<div className="w-full px-10">
 				<h1
 					className={`${messiri.className} ${`text-green-main font-black text-center text-xl`}`}>
