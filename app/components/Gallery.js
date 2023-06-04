@@ -80,9 +80,9 @@ const Gallery = () => {
 				modules={[Autoplay, Pagination, Navigation]}
 				className="mySwiper">
 				{images.map((image) => (
-					<SwiperSlide key={image.id} className="object-cover">
+					<SwiperSlide key={image.id} className="object-cover px-10">
 						<Image
-							className="rounded-xl"
+							className="rounded-xl "
 							src={`/static/img/${image.name}.jpg`}
 							height={400}
 							width={400}
