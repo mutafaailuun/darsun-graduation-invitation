@@ -1,15 +1,15 @@
 "use client";
 import { qw, messiri } from "./fonts";
 import { Element } from "react-scroll";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import DateAndTime from "./components/DateAndTime";
 import Jadwal from "./components/Rundown";
 import Comments from "./components/Comments";
 import Darsun from "/public/svgs/Darsun.svg";
-
 import Ornament4 from "/public/svgs/ornament-4.svg";
 import HomePage from "./components/HomePage";
 import { useSearchParams } from "next/navigation";
+import { scroller  } from "react-scroll";
 import {
 	BsCalendar3,
 	BsFillHouseDoorFill,
@@ -19,7 +19,8 @@ import {
 	BsFillStopCircleFill,
 	BsGeoFill,
 	BsEmojiSmile,
-	BsFilePersonFill
+	BsFilePersonFill,
+	// BsPersonFill,
 } from "react-icons/bs";
 import useSound from "use-sound";
 import Map from "./components/Map";
@@ -33,34 +34,39 @@ export default function Home() {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const fullscreenRef = useRef(null);
 	const name = useSearchParams();
+	const bottomBarRef = useRef(null);
+	const icons = [
+		{
+			id: 1,
+			name: "HomePage",
+			icon: BsFillHouseDoorFill,
+		},
+		{
+			id: 2,
+			name: "datesAndTime",
+			icon: BsCalendar3,
+		},
+		{ id: 3, name: "rundown", icon: BsListCheck },
+		{ id: 4, name: "location", icon: BsGeoFill },
+		{
+			id: 5,
+			name: "comments",
+			icon: BsFillChatSquareQuoteFill,
+		},
+		{ id: 7, name: "contact", icon: BsFilePersonFill },
+		{ id: 8, name: "thanks", icon: BsEmojiSmile },
+		// Add more icons as needed
+	];
 
-	function handleDates() {
-		setCurrentPage("datesAndTime");
+	function handleClickBottomBar(iconId, iconName) {
+		setCurrentPage(iconName);
 	}
 
-	function handleFront() {
-		setCurrentPage("HomePage");
-	}
-	function handleRundown() {
-		setCurrentPage("rundown");
-	}
-	function handleComments() {
-		setCurrentPage("comments");
-	}
-	function handleThanks() {
-		setCurrentPage("thanks");
-	}
-	function handleContact() {
-		setCurrentPage("contact");
-	}
 	function handleOpenButton() {
 		play();
 		setIsPlaying(true);
 		setCurrentPage("HomePage");
 		toggleFullscreen();
-	}
-	function handleLocation() {
-		setCurrentPage("location");
 	}
 
 	function handleSound() {
@@ -85,12 +91,38 @@ export default function Home() {
 		}
 	};
 
+	useEffect(() => {
+		const handleSwipeDown = (event) => {
+			const deltaY = event.deltaY;
+			if (deltaY > 0) {
+				// Swipe down detected, change currentPage
+				const nextIndex = icons.findIndex((icon) => icon.id === currentPage) + 1;
+				if (nextIndex < icons.length) {
+					const nextIcon = icons[nextIndex];
+					handleClickBottomBar(nextIcon.id, nextIcon.name);
+					scroller.scrollTo(nextIcon.id, {
+						duration: 500,
+						smooth: "easeInOutQuart",
+						containerId: "scroll-container",
+						offset: -50,
+					});
+				}
+			}
+		};
+
+		bottomBarRef.current?.addEventListener("wheel", handleSwipeDown);
+
+		return () => {
+			bottomBarRef.current?.removeEventListener("wheel", handleSwipeDown);
+		};
+	}, [currentPage, handleClickBottomBar, icons]);
+
 	return (
 		<div className="relative flex flex-col items-center justify-center">
 			<Element name="open">
 				{currentPage === "open" && (
 					<>
-						<div className="z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
+						<div className="z-20 -mt-[100px] flex items-center flex-col justify-center h-screen overflow-hidden">
 							<span className="p-2 bg-[#AA3609] rounded-full drop-shadow-md">
 								<Darsun className="fill-[#FFFDEC] stroke-[#AA3609] w-14" />
 							</span>
@@ -181,42 +213,17 @@ export default function Home() {
 						/>
 					)}
 
-					<div className="bottom-0 bg-[#373F10] h-14 flex items-center justify-start w-full overflow-scroll snap-x">
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-[90px] flex items-center snap snap-center"
-							onClick={handleFront}>
-							<BsFillHouseDoorFill className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
-						</span>
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
-							onClick={handleDates}>
-							<BsCalendar3 className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
-						</span>
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
-							onClick={handleRundown}>
-							<BsListCheck className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
-						</span>
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
-							onClick={handleLocation}>
-							<BsGeoFill className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
-						</span>
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
-							onClick={handleComments}>
-							<BsFillChatSquareQuoteFill className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
-						</span>
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center snap snap-center"
-							onClick={handleContact}>
-							<BsFilePersonFill className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
-						</span>
-						<span
-							className="hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-full flex items-center"
-							onClick={handleThanks}>
-							<BsEmojiSmile className="text-sm w-[70px] h-[70px] py-3 px-4 hover:fill-[#E7C494] text-[#EEEAD6] " />
-						</span>
+					<div
+						ref={bottomBarRef}
+						className="bottom-bar bottom-0 bg-[#373F10] h-14 flex items-center justify-start w-full overflow-x-scroll">
+						{icons.map((icon) => (
+							<span
+								key={icon.id}
+								className={`hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-[90px] flex items-center snap snap-center`}
+								onClick={() => handleClickBottomBar(icon.id, icon.name)}>
+								<icon.icon className="w-[70px] h-[60px] py-3 px-4 my-2 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+							</span>
+						))}
 					</div>
 				</div>
 			)}
