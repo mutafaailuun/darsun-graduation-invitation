@@ -47,11 +47,13 @@ body {
 }
 
 .swiper {
+	object-fit: cover;
 	width: 20rem;
-	height: 30rem;
+	height: fit-content;
 }
 
 .swiper-slide {
+	object-fit: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -62,7 +64,7 @@ body {
 }
 
 .swiper-slide:nth-child(1n) {
-	background-color: rgb(206, 17, 17);
+	background-color: rgb(255, 255, 255);
 }
 
 .swiper-slide:nth-child(2n) {
@@ -78,7 +80,8 @@ body {
 }
 
 .swiper-slide:nth-child(5n) {
-	background-color: rgb(118, 163, 12);
+	background-color: none;
+	/* background-color: rgb(118, 163, 12); */
 }
 
 .swiper-slide:nth-child(6n) {
@@ -86,7 +89,7 @@ body {
 }
 
 .swiper-slide:nth-child(7n) {
-	background-color: rgb(35, 99, 19);
+	background-color: rgb(255, 255, 255);
 }
 
 .swiper-slide:nth-child(8n) {
