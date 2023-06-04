@@ -53,7 +53,7 @@ const Gallery = () => {
 							alt="slide"
 						/>
 						<Image
-							src={`/img/${image.name}2.jpg`}
+							src={`/static/img/${image.name}2.jpg`}
 							width={400}
 							height={400}
 							alt="slide"

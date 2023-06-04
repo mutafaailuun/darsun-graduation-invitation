@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
 					<div className="relative w-[500px] flex items-center">
 						<Image
 							className="absolute right-[250px] animate-spin-slow z-0"
-							src="/img/mandala-spin.png"
+							src="/static/img/mandala-spin.png"
 							alt="mandala"
 							width={600}
 							height={600}
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
 							{children}
 							<Image
 								className="absolute -bottom-56 animate-reverse-spin -z-10"
-								src="/img/mandala-spin.png"
+								src="/static/img/mandala-spin.png"
 								alt="mandala"
 								width={600}
 								height={600}
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
 
 						<Image
 							className="absolute left-[250px] animate-reverse-spin z-0"
-							src="/img/mandala-spin.png"
+							src="/static/img/mandala-spin.png"
 							alt="mandala"
 							width={600}
 							height={600}
