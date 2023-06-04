@@ -9,7 +9,7 @@ import Darsun from "/public/svgs/Darsun.svg";
 import Ornament4 from "/public/svgs/ornament-4.svg";
 import HomePage from "./components/HomePage";
 import { useSearchParams } from "next/navigation";
-import { scroller  } from "react-scroll";
+import { scroller } from "react-scroll";
 import {
 	BsCalendar3,
 	BsFillHouseDoorFill,
@@ -18,6 +18,7 @@ import {
 	BsFillPlayCircleFill,
 	BsFillStopCircleFill,
 	BsGeoFill,
+	BsImages,
 	BsEmojiSmile,
 	BsFilePersonFill,
 	// BsPersonFill,
@@ -26,6 +27,7 @@ import useSound from "use-sound";
 import Map from "./components/Map";
 import Thanks from "./components/Thanks";
 import Contact from "./components/Contact";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
 	const [currentPage, setCurrentPage] = useState("open");
@@ -52,6 +54,11 @@ export default function Home() {
 			id: 5,
 			name: "comments",
 			icon: BsFillChatSquareQuoteFill,
+		},
+		{
+			id: 6,
+			name: "gallery",
+			icon: BsImages,
 		},
 		{ id: 7, name: "contact", icon: BsFilePersonFill },
 		{ id: 8, name: "thanks", icon: BsEmojiSmile },
@@ -122,7 +129,7 @@ export default function Home() {
 			<Element name="open">
 				{currentPage === "open" && (
 					<>
-						<div className="z-20 -mt-[100px] flex items-center flex-col justify-center h-screen overflow-hidden">
+						<div className="z-20 -mt-14 flex items-center flex-col justify-center h-screen overflow-hidden">
 							<span className="p-2 bg-[#AA3609] rounded-full drop-shadow-md">
 								<Darsun className="fill-[#FFFDEC] stroke-[#AA3609] w-14" />
 							</span>
@@ -195,6 +202,7 @@ export default function Home() {
 			</Element>
 			<Element name="location">{currentPage === "location" && <Map />}</Element>
 			<Element name="contact">{currentPage === "contact" && <Contact />}</Element>
+			<Element name="gallery">{currentPage === "gallery" && <Gallery />}</Element>
 			<Element name="thanks">{currentPage === "thanks" && <Thanks />}</Element>
 
 			{/* Bottom Bar */}
@@ -219,9 +227,9 @@ export default function Home() {
 						{icons.map((icon) => (
 							<span
 								key={icon.id}
-								className={`hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-[90px] flex items-center snap snap-center`}
+								className={`hover:bg-gradient-to-b from-black to-[#272727] w-[90px] h-[60px] flex items-center snap snap-center`}
 								onClick={() => handleClickBottomBar(icon.id, icon.name)}>
-								<icon.icon className="w-[70px] h-[60px] py-3 px-4 my-2 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+								<icon.icon className="w-[70px] h-[70px] py-3 px-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 							</span>
 						))}
 					</div>
