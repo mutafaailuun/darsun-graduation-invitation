@@ -46,17 +46,12 @@ const Gallery = () => {
 				className="mySwiper">
 				{images.map((image) => (
 					<SwiperSlide key={image.id} className="divide-y-8 drop-shadow-lg">
-						<Image
-							src={`/img/${image.name}1.jpg`}
-							width={400}
-							height={400}
-							alt="slide"
-						/>
+						<Image src={`/img/${image.name}1.jpg`} width={400} height={400} alt="" />
 						<Image
 							src={`/static/img/${image.name}2.jpg`}
 							width={400}
 							height={400}
-							alt="slide"
+							alt=""
 						/>
 					</SwiperSlide>
 				))}
