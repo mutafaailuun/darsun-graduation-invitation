@@ -124,17 +124,13 @@ export default function Home() {
 			}
 		};
 
-		bottomBarRef.current?.addEventListener("wheel", handleSwipeDown);
-
 		return () => {
 			bottomBarRef.current?.removeEventListener("wheel", handleSwipeDown);
 		};
 	}, [currentPage, handleClickBottomBar, elements]);
 
 	return (
-		<div
-			ref={bottomBarRef}
-			className="relative flex flex-col items-center justify-center">
+		<div className="relative flex flex-col items-center justify-center">
 			<Element name="open">
 				{currentPage === "open" && (
 					<>

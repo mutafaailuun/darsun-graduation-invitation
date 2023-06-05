@@ -30,7 +30,7 @@ const Thanks = () => {
 			</h1>
 			<motion.button
 				initial={{ opacity: 0, scale: 1 }}
-				animate={{ opacity: 1, scale: 1, rotate: [0, 0, 45, 0] }}
+				animate={{ opacity: 1, scale: 1, rotate: [0, 0, 8, 0] }}
 				transition={{
 					duration: 2,
 					delay: 1,
