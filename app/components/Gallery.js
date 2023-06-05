@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import { BsInstagram } from "react-icons/bs";
 
 const Gallery = () => {
 	const images = [
@@ -59,6 +60,13 @@ const Gallery = () => {
 			name: "mds-batik-2",
 		},
 	];
+	const handleButton = (id) => {
+		if (id === "owl") {
+			window.open(`https://instagram.com/auliyadarsun21?igshid=MzRlODBiNWFlZA==`);
+		} else if (id === "inf") {
+			window.open(`https://instagram.com/mds_darsun?igshid=MzRlODBiNWFlZA==`);
+		}
+	};
 	return (
 		<div className="relative z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">
 			<h1
@@ -90,38 +98,19 @@ const Gallery = () => {
 						/>
 					</SwiperSlide>
 				))}
-				{/* <SwiperSlide>Slide 1</SwiperSlide>
-				<SwiperSlide>Slide 2</SwiperSlide>
-				<SwiperSlide>Slide 3</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-				<SwiperSlide>Slide 5</SwiperSlide>
-				<SwiperSlide>Slide 6</SwiperSlide>
-				<SwiperSlide>Slide 7</SwiperSlide>
-				<SwiperSlide>Slide 8</SwiperSlide>
-				<SwiperSlide>Slide 9</SwiperSlide> */}
 			</Swiper>
-			{/* <Swiper
-				effect={"cards"}
-				grabCursor={true}
-				modules={[EffectCards]}
-				className="mySwiper">
-				{images.map((image) => (
-					<SwiperSlide key={image.id} className="divide-y-8 drop-shadow-lg">
-						<Image
-							src={`/static/img/${image.name}1.jpg`}
-							width={400}
-							height={400}
-							alt=""
-						/>
-						<Image
-							src={`/static/img/${image.name}2.jpg`}
-							width={400}
-							height={400}
-							alt=""
-						/>
-					</SwiperSlide>
-				))}
-			</Swiper> */}
+			<div className="btn-group xs:btn-group-vertical s:btn-group-horizontal mt-4 font-jkt">
+				<button
+					onClick={() => handleButton("owl")}
+					className="btn bg-red-main text-vanilla">
+					<BsInstagram className="mr-2" /> Auliya XXI
+				</button>
+				<button
+					onClick={() => handleButton("inf")}
+					className="btn bg-green-main text-vanilla">
+					Infinity IV <BsInstagram className="ml-2" />
+				</button>
+			</div>
 		</div>
 	);
 };
