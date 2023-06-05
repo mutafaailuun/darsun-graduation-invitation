@@ -20,7 +20,7 @@ const MapGoogle = () => {
 					animate={{ opacity: 1, y: "0%" }}
 					transition={{
 						duration: 0.8,
-						delay: 0.5,
+						delay: 0,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}
 					className={`${
@@ -33,7 +33,7 @@ const MapGoogle = () => {
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 0.8,
-						delay: 0.5,
+						delay: 0,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}
 					className="relative rounded-lg border-green-main drop-shadow-md border-2 w-full"
@@ -47,7 +47,7 @@ const MapGoogle = () => {
 					animate={{ opacity: 1, y: "0%" }}
 					transition={{
 						duration: 0.8,
-						delay: 0.5,
+						delay: 0,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}
 					className={`${jkt.className} ${"text-green-main text-center"}`}>

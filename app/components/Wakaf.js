@@ -15,7 +15,7 @@ const Wakaf = () => {
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 0.8,
-						delay: 0.5,
+						delay: 0,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}>
 					<Image
@@ -31,7 +31,7 @@ const Wakaf = () => {
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 0.8,
-						delay: 0.75,
+						delay: 0,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}
 					className="text-center font-jkt text-green-main mt-2">
@@ -43,7 +43,7 @@ const Wakaf = () => {
 						animate={{ opacity: 1, x: "0%" }}
 						transition={{
 							duration: 0.8,
-							delay: 0.5,
+							delay: 0.25,
 							ease: [0, 0.71, 0.2, 1.01],
 						}}
 						className="my-1 flex items-center justify-center rounded-lg w-fit bg-white">
@@ -63,7 +63,7 @@ const Wakaf = () => {
 						animate={{ opacity: 1, x: "0%" }}
 						transition={{
 							duration: 0.8,
-							delay: 0.75,
+							delay: 0.5,
 							ease: [0, 0.71, 0.2, 1.01],
 						}}
 						className="my-1 flex items-center justify-center rounded-lg w-fit bg-[#690076]">
@@ -83,7 +83,7 @@ const Wakaf = () => {
 						animate={{ opacity: 1, x: "0%" }}
 						transition={{
 							duration: 0.8,
-							delay: 1,
+							delay: 0.75,
 							ease: [0, 0.71, 0.2, 1.01],
 						}}
 						className="my-1 flex items-center justify-center rounded-lg w-fit bg-[#0060af]">

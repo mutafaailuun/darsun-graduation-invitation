@@ -12,7 +12,7 @@ export default function HomePage() {
 			animate={{ opacity: 1, scale: 1 }}
 			transition={{
 				duration: 0.8,
-				delay: 0.5,
+				delay: 0,
 				ease: [0, 0.71, 0.2, 1.01],
 			}}
 			className="z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">

@@ -31,7 +31,7 @@ export default function CountDown() {
 				animate={{ opacity: 1, scale: 1, y: "0%" }}
 				transition={{
 					duration: 2,
-					delay: 0.5,
+					delay: 0,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
@@ -53,7 +53,7 @@ export default function CountDown() {
 				animate={{ opacity: 1, scale: 1, y: "0%" }}
 				transition={{
 					duration: 2,
-					delay: 0.75,
+					delay: 0.25,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
@@ -75,7 +75,7 @@ export default function CountDown() {
 				animate={{ opacity: 1, scale: 1, y: "0%" }}
 				transition={{
 					duration: 2,
-					delay: 1,
+					delay: 0.5,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
@@ -97,7 +97,7 @@ export default function CountDown() {
 				animate={{ opacity: 1, scale: 1, y: "0%" }}
 				transition={{
 					duration: 2,
-					delay: 1.25,
+					delay: 0.75,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">

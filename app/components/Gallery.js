@@ -75,7 +75,7 @@ const Gallery = () => {
 				animate={{ opacity: 1, y: "0%" }}
 				transition={{
 					duration: 0.8,
-					delay: 0.5,
+					delay: 0,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className={`${qw.className} z-10 text-center text-5xl border-collapse text-green-main`}>
@@ -86,7 +86,7 @@ const Gallery = () => {
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{
 					duration: 0.8,
-					delay: 0.5,
+					delay: 0,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}>
 				<Swiper

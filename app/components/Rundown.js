@@ -12,10 +12,10 @@ export default function Rundown() {
 				animate={{ opacity: 1, y: "0%" }}
 				transition={{
 					duration: 0.8,
-					delay: 0.5,
+					delay: 0,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}>
-				<Asset3 className="w-54 w-full" />
+				<Asset3 className="w-54 mt-20 w-full" />
 				<h1
 					className={`${
 						qw.className
@@ -29,7 +29,7 @@ export default function Rundown() {
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 0.8,
-						delay: 0.5,
+						delay: 0,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}
 					className={`${
@@ -126,7 +126,7 @@ export default function Rundown() {
 				animate={{ opacity: 1, y: "0%" }}
 				transition={{
 					duration: 0.8,
-					delay: 0.5,
+					delay: 0,
 					ease: [0, 0.71, 0.2, 1.01],
 				}}>
 				<Asset3 className="w-full mb-3 rotate-180" />
