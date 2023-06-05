@@ -29,7 +29,7 @@ const Thanks = () => {
 				Terima Kasih
 			</h1>
 			<motion.button
-				initial={{ opacity: 0, scale: 0.5 }}
+				initial={{ opacity: 0, scale: 1 }}
 				animate={{ opacity: 1, scale: 1, rotate: [0, 0, 45, 0] }}
 				transition={{
 					duration: 2,
@@ -37,7 +37,7 @@ const Thanks = () => {
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				onClick={handleIg}
-				className="flex items-center justify-center bg-green-main p-2 rounded-lg font-jkt text-vanilla">
+				className="flex items-center justify-center bg-green-main p-2 rounded-lg font-jkt text-van">
 				created by:
 				<BsInstagram className="ml-2 mr-1" />
 				mutafaailuun
