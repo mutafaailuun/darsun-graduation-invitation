@@ -37,7 +37,7 @@ const Thanks = () => {
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				onClick={handleIg}
-				className="flex items-center justify-center bg-green-main p-2 rounded-lg font-jkt">
+				className="flex items-center justify-center bg-green-main p-2 rounded-lg font-jkt text-vanilla">
 				created by:
 				<BsInstagram className="ml-2 mr-1" />
 				mutafaailuun
