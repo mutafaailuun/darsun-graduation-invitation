@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { jkt } from "../fonts";
 import { useState } from "react";
+import { motion } from "framer-motion";
 export default function CountDown() {
 	const [days, setDays] = useState(0);
 	const [hours, setHours] = useState(0);
@@ -25,7 +26,15 @@ export default function CountDown() {
 
 	return (
 		<div className="flex justify-center mt-5">
-			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
+			<motion.span
+				initial={{ opacity: 0, scale: 1, y: "50%" }}
+				animate={{ opacity: 1, scale: 1, y: "0%" }}
+				transition={{
+					duration: 2,
+					delay: 0.5,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
+				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
 						jkt.className
@@ -38,8 +47,16 @@ export default function CountDown() {
 					} ${`text-center text-sm text-white -mt-2 font-bold`}`}>
 					Hari
 				</p>
-			</span>
-			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
+			</motion.span>
+			<motion.span
+				initial={{ opacity: 0, scale: 1, y: "50%" }}
+				animate={{ opacity: 1, scale: 1, y: "0%" }}
+				transition={{
+					duration: 2,
+					delay: 0.75,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
+				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
 						jkt.className
@@ -52,8 +69,16 @@ export default function CountDown() {
 					} ${`text-center text-sm text-white font-bold -mt-2`}`}>
 					Jam
 				</p>
-			</span>
-			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
+			</motion.span>
+			<motion.span
+				initial={{ opacity: 0, scale: 1, y: "50%" }}
+				animate={{ opacity: 1, scale: 1, y: "0%" }}
+				transition={{
+					duration: 2,
+					delay: 1,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
+				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
 						jkt.className
@@ -66,8 +91,16 @@ export default function CountDown() {
 					} ${`text-center text-sm text-white -mt-2 font-bold`}`}>
 					Menit
 				</p>
-			</span>
-			<span className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
+			</motion.span>
+			<motion.span
+				initial={{ opacity: 0, scale: 1, y: "50%" }}
+				animate={{ opacity: 1, scale: 1, y: "0%" }}
+				transition={{
+					duration: 2,
+					delay: 1.25,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
+				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
 				<p
 					className={`${
 						jkt.className
@@ -80,7 +113,7 @@ export default function CountDown() {
 					} ${`text-center text-sm text-white -mt-2 font-bold`}`}>
 					Detik
 				</p>
-			</span>
+			</motion.span>
 		</div>
 	);
 }

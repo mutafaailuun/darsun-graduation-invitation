@@ -2,20 +2,36 @@
 
 import { jkt, qw } from "../fonts";
 import Asset3 from "/public/svgs/Asset-3.svg";
+import { motion } from "framer-motion";
 
 export default function Rundown() {
 	return (
 		<div className="relative mx-10 z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">
-			<Asset3 className="w-54 mt-20" />
-			<h1
-				className={`${
-					qw.className
-				} ${`text-center text-5xl border-collapse text-red-main`}`}>
-				Rundown Acara
-			</h1>
-
+			<motion.div
+				initial={{ opacity: 0, y: "-20%" }}
+				animate={{ opacity: 1, y: "0%" }}
+				transition={{
+					duration: 0.8,
+					delay: 0.5,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}>
+				<Asset3 className="w-54 w-full" />
+				<h1
+					className={`${
+						qw.className
+					} ${`text-center text-5xl border-collapse text-red-main`}`}>
+					Rundown Acara
+				</h1>
+			</motion.div>
 			<div className="relative mb-3 overflow-y-scroll scrollbar text-white">
-				<table
+				<motion.table
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 0.8,
+						delay: 0.5,
+						ease: [0, 0.71, 0.2, 1.01],
+					}}
 					className={`${
 						jkt.className
 					} ${`relative w-full bg-red-main bg-opacity-80 table-compact rounded-xl overflow-y-scroll text-center`}`}>
@@ -103,9 +119,18 @@ export default function Rundown() {
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</motion.table>
 			</div>
-			<Asset3 className="w-54 mb-3 rotate-180" />
+			<motion.div
+				initial={{ opacity: 0, y: "20%" }}
+				animate={{ opacity: 1, y: "0%" }}
+				transition={{
+					duration: 0.8,
+					delay: 0.5,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}>
+				<Asset3 className="w-full mb-3 rotate-180" />
+			</motion.div>
 		</div>
 	);
 }

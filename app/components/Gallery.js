@@ -6,6 +6,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { BsInstagram } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Gallery = () => {
 	const images = [
@@ -69,36 +70,51 @@ const Gallery = () => {
 	};
 	return (
 		<div className="relative z-20 -mt-[60px] flex items-center flex-col justify-center h-screen overflow-hidden">
-			<h1
+			<motion.h1
+				initial={{ opacity: 0, y: "-20%" }}
+				animate={{ opacity: 1, y: "0%" }}
+				transition={{
+					duration: 0.8,
+					delay: 0.5,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
 				className={`${qw.className} z-10 text-center text-5xl border-collapse text-green-main`}>
 				Galeri Foto Wisudawan
-			</h1>
-
-			<Swiper
-				spaceBetween={30}
-				centeredSlides={true}
-				autoplay={{
-					delay: 2500,
-					disableOnInteraction: false,
-				}}
-				pagination={{
-					clickable: true,
-				}}
-				navigation={true}
-				modules={[Autoplay, Pagination, Navigation]}
-				className="mySwiper">
-				{images.map((image) => (
-					<SwiperSlide key={image.id} className="object-cover px-10">
-						<Image
-							className="rounded-xl "
-							src={`/static/img/${image.name}.jpg`}
-							height={400}
-							width={400}
-							alt=""
-						/>
-					</SwiperSlide>
-				))}
-			</Swiper>
+			</motion.h1>
+			<motion.div
+				initial={{ opacity: 0, scale: 0.5 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{
+					duration: 0.8,
+					delay: 0.5,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}>
+				<Swiper
+					spaceBetween={30}
+					centeredSlides={true}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={true}
+					modules={[Autoplay, Pagination, Navigation]}
+					className="mySwiper">
+					{images.map((image) => (
+						<SwiperSlide key={image.id} className="object-cover px-10">
+							<Image
+								className="rounded-xl "
+								src={`/static/img/${image.name}.jpg`}
+								height={400}
+								width={400}
+								alt=""
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</motion.div>
 			<div className="btn-group xs:btn-group-vertical s:btn-group-horizontal mt-4 font-jkt">
 				<button
 					onClick={() => handleButton("owl")}

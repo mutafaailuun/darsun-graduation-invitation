@@ -19,6 +19,7 @@
     "axios": "^1.4.0",
     "daisyui": "^2.51.6",
     "eslint-config-next": "13.4.2",
+    "framer-motion": "^10.12.16",
     "next": "^13.4.3-canary.3",
     "postcss": "8.4.23",
     "prop-types": "^15.8.1",
