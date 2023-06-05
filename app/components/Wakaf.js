@@ -21,7 +21,7 @@ const Wakaf = () => {
 					Salurkan donasi terbaik Anda melalui:
 				</p>
 				<div className="flex flex-col items-center justify-center">
-					<div className="my-2 flex items-center justify-center rounded-lg w-fit bg-white">
+					<div className="my-1 flex items-center justify-center rounded-lg w-fit bg-white">
 						<div className="px-2 bg-[#17908d] rounded-md">
 							<Image src="/static/img/bsi-logo.png" width={100} height={100} />
 						</div>
@@ -33,7 +33,7 @@ const Wakaf = () => {
 							</div>
 						</CopyToClipboard>
 					</div>
-					<div className="my-2 flex items-center justify-center rounded-lg w-fit bg-[#690076]">
+					<div className="my-1 flex items-center justify-center rounded-lg w-fit bg-[#690076]">
 						<div className="p-2 bg-white rounded-md">
 							<Image src="/static/img/muamalat.png" width={100} height={100} />
 						</div>
@@ -43,7 +43,7 @@ const Wakaf = () => {
 							</div>
 						</CopyToClipboard>
 					</div>
-					<div className="my-2 flex items-center justify-center rounded-lg w-fit bg-[#0060af]">
+					<div className="my-1 flex items-center justify-center rounded-lg w-fit bg-[#0060af]">
 						<div className="p-2 bg-white rounded-md">
 							<Image src="/static/img/bca.png" width={100} height={100} />
 						</div>
