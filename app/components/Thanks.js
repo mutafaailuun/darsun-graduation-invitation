@@ -1,8 +1,14 @@
 import { jkt, qw } from "../fonts";
 import Darsun from "/public/svgs/Darsun.svg";
 import { motion } from "framer-motion";
+import { BsInstagram } from "react-icons/bs";
 
 const Thanks = () => {
+	function handleIg() {
+		window.open(
+			window.open(`https://instagram.com/mutafaailuun?igshid=MzRlODBiNWFlZA==`)
+		);
+	}
 	return (
 		<motion.div
 			initial={{ opacity: 0, scale: 0.5 }}
@@ -22,6 +28,20 @@ const Thanks = () => {
 			<h1 className={`${qw.className} ${"text-green-main text-7xl"}`}>
 				Terima Kasih
 			</h1>
+			<motion.button
+				initial={{ opacity: 0, scale: 0.5 }}
+				animate={{ opacity: 1, scale: 1, rotate: [0, 0, 45, 0] }}
+				transition={{
+					duration: 2,
+					delay: 1,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
+				onClick={handleIg}
+				className="flex items-center justify-center bg-green-main p-2 rounded-lg font-jkt">
+				created by:
+				<BsInstagram className="ml-2 mr-1" />
+				mutafaailuun
+			</motion.button>
 		</motion.div>
 	);
 };
