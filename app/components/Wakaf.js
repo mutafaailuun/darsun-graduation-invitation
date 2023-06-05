@@ -37,7 +37,9 @@ const Wakaf = () => {
 						<div className="p-2 bg-white rounded-md">
 							<Image src="/static/img/muamalat.png" width={100} height={100} />
 						</div>
-						<CopyToClipboard text="3900002641" onCopy={() => alert("Copied")}>
+						<CopyToClipboard
+							text="3900002641"
+							onCopy={() => alert("Berhasil disalin!")}>
 							<div className="px-2 rounded-md mx-4">
 								<p className="font-jkt font-semibold text-white">390-000-2641</p>
 							</div>
@@ -47,7 +49,9 @@ const Wakaf = () => {
 						<div className="p-2 bg-white rounded-md">
 							<Image src="/static/img/bca.png" width={100} height={100} />
 						</div>
-						<CopyToClipboard text="6760416876" onCopy={() => alert("Copied")}>
+						<CopyToClipboard
+							text="6760416876"
+							onCopy={() => alert("Berhasil disalin!")}>
 							<div className="px-2 rounded-md mx-4">
 								<p className="font-jkt font-semibold text-white">676-041-6876</p>
 							</div>
