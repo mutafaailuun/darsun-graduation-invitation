@@ -34,14 +34,14 @@ export default function Rundown() {
 					}}
 					className={`${
 						jkt.className
-					} ${`relative w-full bg-red-main bg-opacity-80 table-compact rounded-xl overflow-y-scroll text-center`}`}>
+					} ${`relative w-full bg-gradient-to-b from-[#957314] to-[#C09F3D] table-compact rounded-xl overflow-y-scroll text-center`}`}>
 					{/* head */}
 					<thead>
 						<tr className="text-left my-2">
 							{/* <th className="border border-l-0 border-t-0 border-black text-center text-sm">
 								No
 							</th> */}
-							<th className="border border-l-0 border-t-0 border-r-0 rounded-t-xl border-black pl-2 text-center bg-red-950">
+							<th className="border border-l-0 border-t-0 border-r-0 rounded-t-xl border-black pl-2 text-center bg-[#765a0e]">
 								Kegiatan
 							</th>
 						</tr>

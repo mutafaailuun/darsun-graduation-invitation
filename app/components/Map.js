@@ -6,7 +6,7 @@ const MapGoogle = () => {
 	const containerStyle = {
 		position: relative,
 		width: "100%",
-		height: "60%",
+		height: "45%",
 	};
 
 	const handleMarker = () => {

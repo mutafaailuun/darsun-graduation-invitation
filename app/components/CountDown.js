@@ -35,10 +35,7 @@ export default function CountDown() {
 					ease: [0, 0.71, 0.2, 1.01],
 				}}
 				className="mx-2 bg-gradient-to-b from-[#957314] to-[#C09F3D] w-14 h-20 rounded-lg flex flex-col justify-center">
-				<p
-					className={`${
-						jkt.className
-					} ${`text-center font-black text-4xl text-white mb-2`}`}>
+				<p className={`text-center font-bold text-jkt text-4xl text-white mb-2`}>
 					{days}
 				</p>
 				<p

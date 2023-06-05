@@ -33,7 +33,7 @@ import Wakaf from "./components/Wakaf";
 
 export default function Home() {
 	const [currentPage, setCurrentPage] = useState("open");
-	const soundUrl = "/audio/mahaguru.MP3";
+	const soundUrl = "/audio/maher-zein.mp3";
 	const [play, { stop }] = useSound(soundUrl);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const fullscreenRef = useRef(null);

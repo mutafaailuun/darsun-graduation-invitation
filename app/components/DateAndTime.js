@@ -1,7 +1,7 @@
 "use client";
 
 import CountDown from "./CountDown";
-import { messiri, gv } from "../fonts";
+import { messiri } from "../fonts";
 import Calendar from "/public/svgs/calendar-seventeen.svg";
 import Map from "/public/svgs/map-svgrepo-com.svg";
 import { motion } from "framer-motion";
@@ -25,10 +25,7 @@ export default function DateAndTime() {
 					<br className="s:hidden xs:block" />
 					Pesantren Darus-Sunnah
 				</p>
-				<h1
-					className={`${
-						gv.className
-					} ${`text-[#AA3609] text-3xl text-center py-4`}`}>
+				<h1 className={`text-[#AA3609] text-md text-center py-4 font-messiri`}>
 					Yang Diselenggarakan Pada
 				</h1>
 			</motion.div>
@@ -80,8 +77,9 @@ export default function DateAndTime() {
 						className={`${
 							messiri.className
 						} ${`text-base text-center text-green-main font-semibold`} `}>
-						Jl. Kertamukti, Pisangan, Kec. Ciputat Timur., Kota Tangerang Selatan,
-						Banten 15419
+						Jl. Kertamukti, Pisangan, <br /> Kec. Ciputat Timur., Kota Tangerang
+						Selatan,
+						<br /> Banten 15419
 					</p>
 				</motion.div>
 			</div>
