@@ -77,19 +77,19 @@ export default function Home() {
 	}
 
 	function handleOpenButton() {
-		play();
 		setIsPlaying(true);
 		setCurrentPage("HomePage");
 		toggleFullscreen();
+		play();
 	}
 
 	function handleSound() {
 		if (!isPlaying) {
-			play();
 			setIsPlaying(true);
+			play();
 		} else {
-			stop();
 			setIsPlaying(false);
+			stop();
 		}
 	}
 
