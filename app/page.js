@@ -21,6 +21,7 @@ import {
 	BsImages,
 	BsEmojiSmile,
 	BsFilePersonFill,
+	BsGiftFill,
 	// BsPersonFill,
 } from "react-icons/bs";
 import useSound from "use-sound";
@@ -28,6 +29,7 @@ import Map from "./components/Map";
 import Thanks from "./components/Thanks";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
+import Wakaf from "./components/Wakaf";
 
 export default function Home() {
 	const [currentPage, setCurrentPage] = useState("open");
@@ -65,7 +67,8 @@ export default function Home() {
 			component: <Gallery />,
 		},
 		{ id: 7, name: "Contact", icon: BsFilePersonFill, component: <Contact /> },
-		{ id: 8, name: "Thanks", icon: BsEmojiSmile, component: <Thanks /> },
+		{ id: 8, name: "Wakaf", icon: BsGiftFill, component: <Wakaf /> },
+		{ id: 9, name: "Thanks", icon: BsEmojiSmile, component: <Thanks /> },
 		// Add more icons as needed
 	];
 
@@ -129,7 +132,9 @@ export default function Home() {
 	}, [currentPage, handleClickBottomBar, elements]);
 
 	return (
-		<div className="relative flex flex-col items-center justify-center">
+		<div
+			ref={bottomBarRef}
+			className="relative flex flex-col items-center justify-center">
 			<Element name="open">
 				{currentPage === "open" && (
 					<>
@@ -206,6 +211,7 @@ export default function Home() {
 			<Element name="Location">{currentPage === "Map" && <Map />}</Element>
 			<Element name="Contact">{currentPage === "Contact" && <Contact />}</Element>
 			<Element name="Gallery">{currentPage === "Gallery" && <Gallery />}</Element>
+			<Element name="Wakaf">{currentPage === "Wakaf" && <Wakaf />}</Element>
 			<Element name="Thanks">{currentPage === "Thanks" && <Thanks />}</Element>
 
 			{/* Bottom Bar */}
@@ -235,7 +241,6 @@ export default function Home() {
 								<element.icon className="w-[60px] h-[60px] p-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 							</span>
 						))}
-						
 					</div>
 				</div>
 			)}
