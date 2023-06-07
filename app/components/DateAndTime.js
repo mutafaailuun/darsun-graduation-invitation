@@ -25,7 +25,8 @@ export default function DateAndTime() {
 					<br className="s:hidden xs:block" />
 					Pesantren Darus-Sunnah
 				</p>
-				<h1 className={`text-[#AA3609] text-md text-center py-4 font-messiri`}>
+				<h1
+					className={`${messiri.className} text-[#AA3609] text-md text-center py-4 font-messiri`}>
 					Yang Diselenggarakan Pada
 				</h1>
 			</motion.div>
@@ -51,7 +52,7 @@ export default function DateAndTime() {
 						className={`${
 							messiri.className
 						} ${`text-base text-center font-bold text-red-main pb-4`} `}>
-						Pukul 07.00 s/d Selesai
+						Pukul 09.00 s/d Selesai
 					</p>
 				</motion.div>
 

@@ -4,17 +4,14 @@ import { Element } from "react-scroll";
 import { useState, useRef, useEffect } from "react";
 import DateAndTime from "./components/DateAndTime";
 import Rundown from "./components/Rundown";
-import Comments from "./components/Comments";
 import Darsun from "/public/svgs/Darsun.svg";
 import Ornament4 from "/public/svgs/ornament-4.svg";
 import HomePage from "./components/HomePage";
 import { useSearchParams } from "next/navigation";
-import { scroller } from "react-scroll";
 import {
 	BsCalendar3,
 	BsFillHouseDoorFill,
 	BsListCheck,
-	BsFillChatSquareQuoteFill,
 	BsFillPlayCircleFill,
 	BsFillStopCircleFill,
 	BsGeoFill,
@@ -22,7 +19,6 @@ import {
 	BsEmojiSmile,
 	BsFilePersonFill,
 	BsGiftFill,
-	// BsPersonFill,
 } from "react-icons/bs";
 import useSound from "use-sound";
 import Map from "./components/Map";
@@ -54,25 +50,20 @@ export default function Home() {
 		},
 		{ id: 3, name: "Rundown", icon: BsListCheck, component: <Rundown /> },
 		{ id: 4, name: "Map", icon: BsGeoFill, component: <Map /> },
+
 		{
 			id: 5,
-			name: "Comments",
-			icon: BsFillChatSquareQuoteFill,
-			component: <Comments />,
-		},
-		{
-			id: 6,
 			name: "Gallery",
 			icon: BsImages,
 			component: <Gallery />,
 		},
-		{ id: 7, name: "Contact", icon: BsFilePersonFill, component: <Contact /> },
-		{ id: 8, name: "Wakaf", icon: BsGiftFill, component: <Wakaf /> },
-		{ id: 9, name: "Thanks", icon: BsEmojiSmile, component: <Thanks /> },
+		{ id: 6, name: "Contact", icon: BsFilePersonFill, component: <Contact /> },
+		{ id: 7, name: "Wakaf", icon: BsGiftFill, component: <Wakaf /> },
+		{ id: 8, name: "Thanks", icon: BsEmojiSmile, component: <Thanks /> },
 		// Add more icons as needed
 	];
 
-	function handleClickBottomBar(iconId, iconName) {
+	function handleClickBottomBar(iconName) {
 		setCurrentPage(iconName);
 	}
 
@@ -104,30 +95,6 @@ export default function Home() {
 			});
 		}
 	};
-
-	useEffect(() => {
-		const handleSwipeDown = (event) => {
-			const deltaY = event.deltaY;
-			if (deltaY > 0) {
-				// Swipe down detected, change currentPage
-				const nextIndex = elements.findIndex((icon) => icon.id === currentPage) + 1;
-				if (nextIndex < elements.length) {
-					const nextIcon = elements[nextIndex];
-					handleClickBottomBar(nextIcon.id, nextIcon.name);
-					scroller.scrollTo(nextIcon.id, {
-						duration: 500,
-						smooth: "easeInOutQuart",
-						containerId: "scroll-container",
-						offset: -50,
-					});
-				}
-			}
-		};
-
-		return () => {
-			bottomBarRef.current?.removeEventListener("wheel", handleSwipeDown);
-		};
-	}, [currentPage, handleClickBottomBar, elements]);
 
 	return (
 		<div className="relative flex flex-col items-center justify-center">
@@ -201,9 +168,6 @@ export default function Home() {
 				{currentPage === "DateAndTime" && <DateAndTime />}
 			</Element>
 			<Element name="rundown">{currentPage === "Rundown" && <Rundown />}</Element>
-			<Element name="Comments">
-				{currentPage === "Comments" && <Comments />}
-			</Element>
 			<Element name="Location">{currentPage === "Map" && <Map />}</Element>
 			<Element name="Contact">{currentPage === "Contact" && <Contact />}</Element>
 			<Element name="Gallery">{currentPage === "Gallery" && <Gallery />}</Element>
@@ -233,7 +197,7 @@ export default function Home() {
 							<span
 								key={element.id}
 								className={`carousel-item hover:bg-gradient-to-b from-black to-[#272727] w-[60px] h-[60px] flex items-center snap snap-center`}
-								onClick={() => handleClickBottomBar(element.id, element.name)}>
+								onClick={() => handleClickBottomBar(element.name)}>
 								<element.icon className="w-[60px] h-[60px] p-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 							</span>
 						))}
