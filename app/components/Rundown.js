@@ -101,11 +101,7 @@ export default function Rundown() {
 							{/* <td className="border border-l-0 border-black pl-2">9</td> */}
 							<td className="border border-r-0 border-black pl-2">Peluncuran Buku</td>
 						</tr>
-						{/* row 10 */}
-						<tr>
-							{/* <td className="border border-l-0 border-black pl-2">10</td> */}
-							<td className="border border-r-0 border-black pl-2">Puisi</td>
-						</tr>
+
 						{/* row 11 */}
 						<tr>
 							{/* <td className="border border-l-0 border-black pl-2">11</td> */}
