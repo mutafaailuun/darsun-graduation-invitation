@@ -14,7 +14,10 @@ const Gallery = () => {
 			id: 1,
 			name: "campur-01",
 		},
-
+		{
+			id: 9,
+			name: "mdsbareng-1",
+		},
 		{
 			id: 2,
 			name: "campur-02",
@@ -29,6 +32,10 @@ const Gallery = () => {
 			name: "campur-2",
 		},
 		{
+			id: 10,
+			name: "mdsbareng-2",
+		},
+		{
 			id: 5,
 			name: "banin-1",
 		},
@@ -37,6 +44,11 @@ const Gallery = () => {
 			name: "banin-2",
 		},
 		{
+			id: 11,
+			name: "mds-batik-1",
+		},
+
+		{
 			id: 7,
 			name: "banat-1",
 		},
@@ -44,18 +56,7 @@ const Gallery = () => {
 			id: 8,
 			name: "banat-2",
 		},
-		{
-			id: 9,
-			name: "mdsbareng-1",
-		},
-		{
-			id: 10,
-			name: "mdsbareng-2",
-		},
-		{
-			id: 11,
-			name: "mds-batik-1",
-		},
+
 		{
 			id: 12,
 			name: "mds-batik-2",
