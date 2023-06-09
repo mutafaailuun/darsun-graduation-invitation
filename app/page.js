@@ -238,7 +238,7 @@ export default function Home() {
 								<span
 									className={`text ${
 										showText ? "visible" : ""
-									} text-xs text-vanilla font-medium font-jkt mb-1`}>
+									} text-xs text-vanilla font-jkt mb-1`}>
 									{element.label}
 								</span>
 							</div>
