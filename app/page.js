@@ -32,6 +32,7 @@ export default function Home() {
 	const soundUrl = "/audio/maher-zein.mp3";
 	const [play, { stop }] = useSound(soundUrl);
 	const [isPlaying, setIsPlaying] = useState(false);
+	const [showText, setShowText] = useState(false);
 	const fullscreenRef = useRef(null);
 	const name = useSearchParams();
 	const bottomBarRef = useRef(null);
@@ -41,30 +42,64 @@ export default function Home() {
 			name: "HomePage",
 			icon: BsFillHouseDoorFill,
 			component: <HomePage />,
+			label: "Beranda",
 		},
 		{
 			id: 2,
 			name: "DateAndTime",
 			icon: BsCalendar3,
 			component: <DateAndTime />,
+			label: "Waktu/Tempat",
 		},
-		{ id: 3, name: "Rundown", icon: BsListCheck, component: <Rundown /> },
-		{ id: 4, name: "Map", icon: BsGeoFill, component: <Map /> },
+		{
+			id: 3,
+			name: "Rundown",
+			icon: BsListCheck,
+			component: <Rundown />,
+			label: "Acara",
+		},
+		{
+			id: 4,
+			name: "Map",
+			icon: BsGeoFill,
+			component: <Map />,
+			label: "G-Maps",
+		},
 
 		{
 			id: 5,
 			name: "Gallery",
 			icon: BsImages,
 			component: <Gallery />,
+			label: "Galeri",
 		},
-		{ id: 6, name: "Contact", icon: BsFilePersonFill, component: <Contact /> },
-		{ id: 7, name: "Wakaf", icon: BsGiftFill, component: <Wakaf /> },
-		{ id: 8, name: "Thanks", icon: BsEmojiSmile, component: <Thanks /> },
+		{
+			id: 6,
+			name: "Contact",
+			icon: BsFilePersonFill,
+			component: <Contact />,
+			label: "Bantuan",
+		},
+		{
+			id: 7,
+			name: "Wakaf",
+			icon: BsGiftFill,
+			component: <Wakaf />,
+			label: "Wakaf",
+		},
+		{
+			id: 8,
+			name: "Thanks",
+			icon: BsEmojiSmile,
+			component: <Thanks />,
+			label: "Thanks",
+		},
 		// Add more icons as needed
 	];
 
 	function handleClickBottomBar(iconName) {
 		setCurrentPage(iconName);
+		setShowText(!showText);
 	}
 
 	function handleOpenButton() {
@@ -192,14 +227,19 @@ export default function Home() {
 
 					<div
 						ref={bottomBarRef}
-						className="carousel bottom-bar bottom-0 bg-[#373F10] h-[60px] flex items-center justify-start w-full overflow-x-scroll">
+						className="carousel bottom-bar bottom-0 bg-[#373F10] flex items-center justify-start overflow-x-scroll">
 						{elements.map((element) => (
-							<span
+							<div
 								key={element.id}
-								className={`carousel-item hover:bg-gradient-to-b from-black to-[#272727] w-[60px] h-[60px] flex items-center snap snap-center`}
+								className={`carousel-item hover:bg-gradient-to-b from-black to-[#272727] w-[60px] h-[60px] flex flex-col items-center justify-center px-2`}
 								onClick={() => handleClickBottomBar(element.name)}>
-								<element.icon className="w-[60px] h-[60px] p-4 text-[#EEEAD6]  hover:fill-[#E7C494]" />
-							</span>
+								<element.icon className="w-[60px] h-[60px] px-2 pt-2 pb-1 text-[#EEEAD6]  hover:fill-[#E7C494]" />
+								{/* {showText && <p className="text-xs font-jkt mb-1"> {element.label}</p>} */}
+								<span
+									className={`text ${showText ? "visible" : ""} text-xs font-jkt mb-1`}>
+									{element.label}
+								</span>
+							</div>
 						))}
 					</div>
 				</div>

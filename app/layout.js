@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="id">
 			<body>
-				<main className="relative flex items-center justify-center h-screen bg-zinc-900 overflow-hidden">
+				<main className="relative flex items-center justify-center h-screen bg-gradient-to-b from-[#1F1300] to-[#372200] overflow-hidden">
 					<div className="relative w-[500px] flex items-center">
 						<Image
 							className="absolute right-[250px] animate-spin-slow z-0"
