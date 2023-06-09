@@ -236,7 +236,9 @@ export default function Home() {
 								<element.icon className="w-[60px] h-[60px] px-2 pt-2 pb-1 text-[#EEEAD6]  hover:fill-[#E7C494]" />
 								{/* {showText && <p className="text-xs font-jkt mb-1"> {element.label}</p>} */}
 								<span
-									className={`text ${showText ? "visible" : ""} text-xs font-jkt mb-1`}>
+									className={`text ${
+										showText ? "visible" : ""
+									} text-xs text-vanilla font-medium font-jkt mb-1`}>
 									{element.label}
 								</span>
 							</div>
